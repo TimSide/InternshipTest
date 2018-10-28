@@ -8,8 +8,6 @@ namespace InternshipTest
     {
         private static void Main(string[] args)
         {
-            var all = new List<Student>();
-            
             
             var chdtu = new University("Черкаський державний технолонічний університет");
             var chnu = new University("Черкаський національний університет");
@@ -30,10 +28,16 @@ namespace InternshipTest
             
             chdtu.GetStudents();
             chnu.GetStudents();
-            
-//            if () {}
-            
-           
+
+            PersonsBase.GetAllStudentsFromBase();
+
+//            foreach (var university in allUniversities)
+//            {
+
+//            }
+
+
+
 
 //            var s = new Student("Alex");
 //            University university = new University("CH.U.I.");

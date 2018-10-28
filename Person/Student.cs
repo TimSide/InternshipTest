@@ -1,3 +1,4 @@
+using System;
 using internshiptest.Person;
 
 namespace InternshipTest.Person
@@ -10,6 +11,7 @@ namespace InternshipTest.Person
         public Student(string name) : base(0)
         {
             _name = name;
+            PersonsBase.AddPersonToBase(this);
         }
         
         // Create student with knowledge
@@ -17,6 +19,7 @@ namespace InternshipTest.Person
         {
             _name = name;
             SetKnowledge(levelOfKnowledge);
+            PersonsBase.AddPersonToBase(this);
         }
 
         // Getters
