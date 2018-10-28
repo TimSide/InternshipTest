@@ -16,18 +16,24 @@ namespace InternshipTest
         public static void AddPersonToBase(Student student)
         {
             PersonBase.Add(student);
-            Console.WriteLine("Student " + student.GetName() + " added to Base");
+//            Console.WriteLine("Student " + student.GetName() + " added to Base");
         }
 
         // Returns all persons (students) from base
-        public static void /*List<Student>*/ GetAllStudentsFromBase()
+        public static List<Student> GetAllStudentsFromBase()
+        {
+            return PersonBase;
+        }
+        
+        //===========
+        // Print all persons (students) from base  (!!! Command prompt only)
+        public static void PrintAllStudentsFromBase()
         {
             Console.WriteLine("\n=========STUDENT BASE=========");
             foreach (var student in PersonBase)
             {
                 Console.WriteLine("Name " + student.GetName() + "; knowledge = " + student.GetKnowledge());
             }
-            // return PersonBase;
         }
     }
 }

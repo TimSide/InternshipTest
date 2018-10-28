@@ -25,11 +25,17 @@ namespace InternshipTest.Institution
             }
         }
         
-        // Print all students of university
-        public void /*List<Student>*/ GetStudents()
+        // Get all students of university
+        public List<Student> GetsStudents()
+        {
+            return _students;
+        }
+        
+        //=======
+        // Print all students of university (!!! Command prompt only)
+        public void PrintStudents()
         {
             Console.WriteLine("\nStudents of " + _name + ":");
-
             if (_students.Count().Equals(0))    // Students not accepted to university
             {
                 Console.WriteLine("---No students---");
@@ -42,8 +48,6 @@ namespace InternshipTest.Institution
                     Console.WriteLine(", knowledge = " + student.GetKnowledge());
                 }
             }
-
-            //return _students;
         }
     }
 }
