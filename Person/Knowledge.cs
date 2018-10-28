@@ -1,10 +1,28 @@
-namespace InternshipTest
+namespace internshiptest.Person
 {
-    public class Knowledge
+    public abstract class Knowledge
     {
-        public Knowledge(int level)
+        
+        private int _knowledge;
+        
+        // Constructor
+        protected Knowledge(int level)
         {
-            //TODO: Implementation is needed
+            _knowledge = level;
+        }
+
+        // Setters
+
+        public void SetKnowledge(int level)
+        {
+            _knowledge = level;
+        }
+        
+        // Getters
+
+        public int GetKnowledge()
+        {
+            return _knowledge;
         }
     }
 }

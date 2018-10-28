@@ -1,15 +1,30 @@
+using internshiptest.Person;
+
 namespace InternshipTest.Person
 {
-    public class Student
+    public class Student : Knowledge
     {
-        public Student(string name)
+        
+        private readonly string _name;
+        
+        // Create student without knowledge
+        public Student(string name) : base(0)
         {
-            //TODO: Implementation is needed
+            _name = name;
         }
 
-        public void SetKnowledge(Knowledge knowledge)
+        // Create student with knowledge
+        public Student(string name, int levelOfKnowledge)  : base(levelOfKnowledge)
         {
-            //TODO: Implementation is needed
+            _name = name;
+            SetKnowledge(levelOfKnowledge);
+        }
+        
+        // Getters
+
+        public string GetName()
+        {
+            return _name;
         }
     }
 }

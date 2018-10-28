@@ -1,16 +1,28 @@
+using System.Collections.Generic;
+using internshiptest.Person;
+using InternshipTest.Person;
+
 namespace InternshipTest.Institution.InterLink
 {
-    public class Internship
+    public class Internship : Knowledge
     {
-        public Internship(string name)
+        private string _name;
+        private readonly List<Student> _interns = new List<Student>();
+        
+        public Internship(string name) : base(0)
         {
-            //TODO: Implementation is needed      
+            _name = name;      
         }
 
-        public string GetStudents()
+        public void AddMember(Student student)
         {
-            //TODO: Implementation is needed
-            return "Andrew Maslenko\nJulia Veselkina\n";
+            _interns.Add(student);
+        }
+        
+        public List<Student> GetStudents()
+        {
+            return _interns;
+            // return "Andrew Maslenko\nJulia Veselkina\n";
         }
     }
 }
