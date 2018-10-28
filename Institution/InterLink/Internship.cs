@@ -11,7 +11,7 @@ namespace InternshipTest.Institution.InterLink
         
         public Internship(string name) : base(0)
         {
-            _name = name;      
+            _name = name;     
         }
 
         public void AddMember(Student student)

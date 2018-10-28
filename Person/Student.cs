@@ -4,7 +4,6 @@ namespace InternshipTest.Person
 {
     public class Student : Knowledge
     {
-        
         private readonly string _name;
         
         // Create student without knowledge
@@ -12,14 +11,14 @@ namespace InternshipTest.Person
         {
             _name = name;
         }
-
+        
         // Create student with knowledge
         public Student(string name, int levelOfKnowledge)  : base(levelOfKnowledge)
         {
             _name = name;
             SetKnowledge(levelOfKnowledge);
         }
-        
+
         // Getters
 
         public string GetName()

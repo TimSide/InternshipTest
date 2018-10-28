@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using InternshipTest.Person;
 
 namespace InternshipTest.Institution
@@ -24,9 +26,24 @@ namespace InternshipTest.Institution
         }
         
         // Print all students of university
-        public List<Student> GetStudents()
+        public void /*List<Student>*/ GetStudents()
         {
-            return _students;
+            Console.WriteLine("\nStudents of " + _name + ":");
+
+            if (_students.Count().Equals(0))    // Students not accepted to university
+            {
+                Console.WriteLine("---No students---");
+            }
+            else    // Print students of university
+            {
+                foreach (var student in _students)
+                {
+                    Console.Write(student.GetName());
+                    Console.WriteLine(", knowledge = " + student.GetKnowledge());
+                }
+            }
+
+            //return _students;
         }
     }
 }

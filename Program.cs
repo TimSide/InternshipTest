@@ -1,7 +1,6 @@
-﻿using System;
+﻿using System.Collections.Generic;
 using InternshipTest.Person;
 using InternshipTest.Institution;
-using InternshipTest.Institution.InterLink;
 
 namespace InternshipTest
 {
@@ -9,25 +8,32 @@ namespace InternshipTest
     {
         private static void Main(string[] args)
         {
+            var all = new List<Student>();
+            
+            
             var chdtu = new University("Черкаський державний технолонічний університет");
             var chnu = new University("Черкаський національний університет");
             var bk = new University("Черкаський державний бізнес-коледж");
-
+            
             // Create student - First way
             var timofyiSide = new Student("Timofyi Side");
             timofyiSide.SetKnowledge(85);
-
+            
             // Create student - Second way
             var mariaKarpova = new Student("Maria Karpova", 72);
             var petroPoroshenko = new Student("Petro Poroshenko", 78);
             var donaldTrump = new Student("Donald Trump", 82);
-
+            
             // Add students to universities
             chdtu.AddStudents(timofyiSide, mariaKarpova, donaldTrump);
-            chnu.AddStudents(petroPoroshenko, donaldTrump);
-
-            Console.WriteLine(chdtu.GetStudents());
-
+            chnu.AddStudents(petroPoroshenko,donaldTrump);
+            
+            chdtu.GetStudents();
+            chnu.GetStudents();
+            
+//            if () {}
+            
+           
 
 //            var s = new Student("Alex");
 //            University university = new University("CH.U.I.");
